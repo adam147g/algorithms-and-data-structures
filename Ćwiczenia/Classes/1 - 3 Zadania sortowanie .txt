@@ -1,0 +1,87 @@
+		ćw 1.
+zad1.
+# Proszę zaimplementować sortowanie tablicy w czasie O(n^2).
+selection_sort
+
+zad2.
+# Proszę zaimplementować wstawianie Node'a do posortowanej listy jednokierunkowej.
+
+zad3.
+# Proszę zaimplementować usuwanie z listy jednokierunkowej największej liczby.
+
+zad4.
+# Proszę napisać funkcję odwracającą kolejność węzłów w liście.
+
+zad5.
+# Proszę napisać funkcję znajdującą minimum i maksimum
+# w tablicy o długości n, wykonując a 3/2n + c porównań.
+
+zad6.
+# Proszę zaimplementować wyszukiwanie binarne w posortowanej tablicy,
+# znajdujące najmniejszy indeks z daną wartością.
+
+/offline/
+# Mergesort
+
+
+		ćw 2.
+zad1.
+# Proszę zaimplementować algorytm sortowania przez scalanie dla list jednokierunkowych:
+#       a) funkcja scalająca
+#       b) funkcja sortująca
+
+zad2.
+# Tablica A, n elemenotwa, posortowana, x - liczba
+# Proszę podać algorytm znajdujący indeksy i oraz j takie że
+# A[i] + A[j] = x (lub ich nie ma)
+
+zad3.
+# Proszę zaproponować i zaimplementować algorytm, który mając na wejściu tablicę A zwraca liczbę
+# jej inwersji (t.j. liczbę par indeksów i < j takich, że A[i] > A[j]).
+
+zad4.
+# Mamy serię pojemników z wodą, połączonych (każdy z każdym) rurami. Pojemniki maja kształty prostokątów,
+# rury nie maja objetosci (powierzchni). Każdy pojemnik opisany jest przez współrzędne lewego górnego
+# rogu i prawego dolnego rogu. Wiemy, ze do pojemników nalano A “powierzchni” wody (oczywiście woda
+# rurami spłynęła do najniźszych pojemników). Proszę zaproponować algorytm Obliczający ile pojemników
+# zostało w pełni zalanych.
+
+zad5.
+# Mamy daną tablicę A z n liczbami. Proszę zaproponować algorytm o złożoności O(n), który stwierdza,
+# czy istnieje liczba x (tzw. lider A), która występuje w A na ponad połowie pozycji.
+
+zad6.
+# Dany jest ciąg przedziałów domkniętych [a1, b1], ..., [an, bn]. Proszę zapropnować algorytm, który
+# znajduje taki przedział [at, bt], w którym w całości zawiera się jak najwięcej innych przedziałów.
+
+/offline/
+# QuickSort na listach
+
+		ćw 3.
+zad1.
+# Proszę zaimplementować Quick Sort tak, by zawsze używał najwyżej O(logn) dodatkowej pamięci.
+
+zad2.
+# Proszę zaimplementować funkcję wstawiającą dowolny element do kopca binarnego.
+# zakładamy, że kopiec jest poprawny
+
+zad3.
+# Proszę zaimplementować Quick Sort iteracyjnie.
+
+zad4.
+# Dana jest tablica n liczb. Proszę zaproponować algorytm który
+# stwierdza czy pewna liczba występuje w ciągu > (więcej niż) n/2 razy.
+
+zad5.
+# Proszę zaimplementować funkcję partition z algorytmu QuickSort według pomysłu Hoare’a (tj. mamy dwa
+# indeksy, i oraz j, wędrujące z obu końców tablicy w stronę środka i zamieniamy elementy tablicy pod
+# nimi jeśli mniejszy indeks wskazuje na wartość większą od piwota, a większy na mniejszą).
+
+zad6.
+# Proszę zaproponować algorytm scalający k posortowanych list.
+
+/offline/
+# Zaimplementować algorytm "Magiczne Piątki"
+# Który dostaje na wejściu tablicę liczb naturalnych A oraz liczbę k i zwraca liczbę,
+# która po posortowaniu tablicy A byłaby pod indeksem k. Można założyć, że wszystkie
+# liczby w tablicy A są parami różne

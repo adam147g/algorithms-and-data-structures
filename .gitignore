@@ -1,11 +1,10 @@
 .idea/
-Wykłady 2021/**/*.mp4
-Wykłady 2021/**/*.mkv
+*.mp4
+*.mkv
+*.mov
+*.docx
 Wykłady 2021/**/*.pdf
 Wykłady 2021/Wykład 4/*.bmp
-Wykłady 2021/Wykład 5/*.mov
 Wykłady 2021/Wykład 5/*.mp3
-Wykłady 2021/Wykład 6/*.mov
 Wykłady 2021/Wykład 15/
 Wykłady 2022/
-

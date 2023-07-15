@@ -1,0 +1,173 @@
+		ćw 7.
+zad1.
+# Czołg jedzie z punktu A do punktu B. Spalanie czołgu to dokładnie jeden litr paliwa na jeden kilometr
+# trasy. W baku mieści się dokładnie L litrów paliwa. Trasa z A do B to prosta, na której znajdują się
+# stacje benzynowe (na pozycjach będących liczbami naturalnymi; A jest na pozycji 0). Proszę podać
+# algorytmy dla następujących przypadków:
+#     1. Wyznaczamy stacje na których tankujemy tak, żeby łączna liczba tankowań była minimalna.
+
+zad2.
+# Tankowanie czołgu z cenami za paliwo
+# L - pojemność baku czołgu (litry)
+# Si - odległość stacji od punktu 0 (km)
+# czołg spala 1 l/km
+# Pi - cena za 1 litr na każdej stacji
+# Czołg startuje z pełnym bakiem. Obliczyć minimalny koszt dotarcia do punktu końcowego:
+#   a) na każdej stacji można tankować tyle ile się chce,
+#   b) jeśli tankujemy to do pełna.
+
+zad3.
+# Znajdź jak najmniejszą ilość przedziałów zawierającą wszystkie
+# wartości z podanej listy i podaj je.
+
+# Dany jest zbiór punktów X = {x 1 , . . . , x n } na prostej. Proszę podać algorytm,
+# który znajduje minimalną liczbę przedziałów jednostkowych domkniętych, potrzebnych
+# do pokrycia wszystkich punktów z X.
+
+zad4.
+# Tablica wag zajęć i terminów do ich zrobienia
+# jakie zajęcia należy wybrać aby waga była największa?
+
+zad5.
+# Mamy przyczepę o pojemności K kilogramów oraz zbiór ładunków o wagach w1 , ..., wn. Waga każdego
+# z ładunków jest potęgą dwójki (czyli, na przykład, dla siedmiu ładunków wagi mogą wynosić
+# 2, 2, 4, 8, 1, 8, 16, a pojemność przyczepy K = 27). Proszę podać algorytm który wybiera ładunki
+# tak, że przyczepa jest możliwie maksymalnie zapełniona (ale bez przekraczania pojemności)
+# i jednocześnie użyliśmy możliwie jak najmniej ładunków. (Ale jeśli da się np. załadować przyczepę
+# do pełna uzywając 100 ładunków, albo zaladować do pojemności K − 1 używając jednego ładunku,
+# to lepsze jest to pierwsze rozwiązanie).
+
+zad6.
+# Grupa m dzieci bawi się w układanie możliwie jak największej wieży. Każde dziecko ma
+# klocki różnej wysokości. Pierwsze dziecko ma klocki o wysokościach w1, ..., wn, drugie
+# dziecko klocki o wyskościach w1', ..., wn', itd. Dzieci właśnie poszły zjeść deser zanim
+# ułożą swoje wieże, ale jedno dziecko zostało. Ma teraz jedyną okazję, żeby podebrać
+# kilka klocków innym dzieciom tak, żeby jego wieża była najwyższa. Proszę podać algorytm
+# rozwiązujący ten problem, który zabiera minimalną ilość klocków.
+
+
+---GRAFY----
+
+/offline/
+Proszę zaimplementować funkcję: euler(G), która sprawdza czy G posiada
+# cykl Eulera i jeśli tak, to zwraca listę z kolejnymi numerami
+# wierzchołków na takim cyklu, a jeśli nie, to zwraca None.
+
+
+		ćw 8.
+zad1.
+# Dany jest spójny graf nieskierowany G = (V,E). Proszę zaproponować algorytm, który znajdzie taką
+# kolejność usuwania wierzchołków, która powoduje że w trakcie usuwania graf nigdy nie przestaje
+# być spójny (usunięcie wierzchołka usuwa, oczywiście, wszystkie dotykające go krawędzie).
+
+zad2.
+# Proszę podać jak najszybszy algorytm, który znajduje w grafie cykl długości dokładnie 4
+# (trywialny algorytm ma złożoność O(n^4), gdzie n to liczba wierzchołków, chodzi
+# o rozwiązanie szybsze).
+
+zad3.
+# Proszę zaimplementować algorytm sprawdzający czy graf jest dwudzielny.
+
+zad4.
+# Proszę zaimplementować algorytm który policzy liczbę spójnych składowych w grafie
+# (reprezentacja macierzowa).
+
+zad5.
+# Mówimy, że wierzchołek t w grafie skierowanym jest uniwersalnym ujściem, jeśli:
+#   (a) z każdego innego wierzchołka v istnieje krawędź z v do t, oraz
+#   (b) nie istnieje żadna krawędź wychodząca z t.
+# Proszę podać algorytm znajdujący ujście (jeśli istnieje) przy reprezentacji macierzowej grafu.
+
+zad6.
+# Proszę zaimplementować algorytm który dla danego wierzchołka efektywnie znajdzie najkrótszą
+# ścieżkę do dowolnego innego wierzchołka za pomocą BFS.
+
+zad7.
+# Dany jest graf G = (V, E), gdzie każda krawędź ma wagę ze zbioru {1, . . . , |E|}
+# (wagi krawędzi są parami różne). Proszę zaproponować algorytm, który dla danych wierzchołków
+# x i y sprawdza, czy istnieje ścieżka z x do y, w której przechodzimy po krawędziach o coraz
+# mniejszych wagach.
+
+zad8.
+# Dana jest mapa kraju w postaci grafu G = (V, E). Kierowca chce przejechać z miasta
+# (wierzchołka) s do miasta t. Niestety niektóre drogi (krawędzie) są płatne. Każda droga ma
+# taką samą jednostkową opłatę. Proszę podać algorytm, który znajduje trasę wymagającą jak
+# najmniejszej liczby opłat. W ogólności graf G jest skierowany, ale można najpierw wskazać
+# algorytm dla grafu nieskierowanego.
+
+zad9.
+# Dany jest graf G = (V, E), którego wierzchołki reprezentują punkty nawigacyjne nad Bajtocją,
+# a krawędzie reprezentują korytarze powietrzne między tymi punktami. Każdy korytarz powietrzny
+# e[i] ∈ E powiązany jest z optymalnym pułapem przelotu p[i] ∈ N (wyrażonym w metrach). Przepisy
+# dopuszczają przelot danym korytarzem jeśli pułap samolotu różni się od optymalnego najwyżej
+# o t metrów. Napisz algorytm, który sprawdza czy istnieje możliwość przelotu z zadanego punktu
+# x ∈ V do zadanego punktu y ∈ V w taki sposób, żeby samolot nigdy nie zmieniał pułapu.
+
+zad10.
+# Dana jest szachownica o wymiarach n × n. Każde pole (i, j) ma koszt (liczbę ze zbioru {1, ..., 5})
+# umieszczony w tablicy A (na polu A[j][i]). W lewym górnym rogu szachownicy stoi król, którego zadaniem
+# jest przejsc do prawego dolnego rogu, przechodzac po polach o minmalnym sumarycznym koszcie. Prosze
+# zaimplementowac funkcje kings_path(A), która oblicza koszt sciezki króla. Funkcja powinna byc mozliwie
+# jak najszybsza.
+
+\offline\
+# Proszę zaimplementować funkcję: min_cycle(G), która sprawdza czy G
+# ma cykl i jeśli tak, to zwraca cykl o najmnieszej sumie długości tworzących
+# go krawędzi.
+
+
+		ćw 9.
+zad1.
+# Proszę zaimplementować algorytm Dijkstry dla wybranej reprezentacji grafu.
+# Reprezentacja grafu w postaci listy sąsiedztwa.
+
+zad2.
+# Proszę zaimplementować wybrany przez siebie algorytm obliczania minimalnego drzewa rozpinającego dla
+# wybranej reprezentacji grafu.
+# Algorytm Kruskala dla grafu w postaci macierzy sąsiedztwa.
+
+zad3.
+# Ścieżka Hamiltona to ścieżka przechodząca przez wszystkie wierzchołki w grafie, przez każdy dokładnie
+# raz. Proszę podać algorytm, który stwierdzi czy istnieje ścieżka Hamiltona w acyklicznym grafie skierowanym.
+
+zad4.
+# Wierzchołek v w grafie skierowanym nazywamy dobrym początkiem jeśli każdy inny wierzchołek można
+# osiągnąć scieżką skierowaną wychodzącą z v. Proszę podać algorytm, który stwierdza czy dany graf
+# zawiera dobry początek.
+
+zad5.
+# Jak znaleźć najkrótsze ścieżki z wierzchołka s do wszystkich innych w acyklicznym grafie skierowanym?
+
+zad6.
+# Mamy dany graf G = (V, E) z wagami w: E → N-{0} (dodatnie liczby naturalne). Chcemy znalezc scieżkę
+# z wierzchołka u do v tak, by iloczyn wag był minimalny.
+
+zad7.
+# Przewodnik chce przewieźć grupę K turystów z miasta A do miasta B. Po drodze jest jednak wiele innych
+# miast i między różnymi miastami jeżdzą autobusy o różnej pojemności. Mamy daną listę trójek postaci
+# (x, y, c), gdzie x i y to miasta między którymi bezpośrednio jeździ autobus o pojemności c pasażerów.
+# Przewodnik musi wyznaczyć wspólną trasę dla wszystkich turystów i musi ich podzielić na grupki tak, żeby
+# każda grupka mogła przebyć trasę bez rozdzielania się. Proszę podać algorytm, który oblicza na ile
+# (najmniej) grupek przewodnik musi podzielić turystów (i jaką trasą powinni się poruszać), żeby wszyscy
+# dostali się z A do B.
+
+zad8.
+# Dana jest mapa kraju w postaci grafu G = (V, E), gdzie wierzchołki to miasta a krawędzie to drogi
+# łączące miasta. Dla każdej drogi znana jest jej długość (wyrażona w kilometrach jako liczba naturalna).
+# Alicja i Bob prowadzą (na zmianę) autobus z miasta x ∈ V do miasta y ∈ V, zamieniając się za kierownicą
+# w każdym kolejnym mieście. Alicja wybiera trasę oraz decyduje, kto prowadzi pierwszy. Proszę zapropnować
+# algorytm, który wskazuje taką trasę (oraz osobę, która ma prowadzić pierwsza), żeby Alicja przejechała
+# jak najmniej kilometrów.
+
+zad9.
+# Pewien podróżnik chce przebyć trasę z punktu A do punktu B. Niestety jego samochód spala dokładnie jeden
+# litr paliwa na jeden kilometr trasy. W baku mieści się dokładnie D litrów paliwa. Trasa jest reprezentowana
+# jako graf, gdzie wierzchołki to miasta a krawędzie to łączące je drogi. Każda krawędź ma długość w
+# kilometrach (przedstawioną jako liczba naturalna). W każdym wierzchołku jest stacja benzynowa, z daną ceną
+# za litr paliwa. Proszę podać algorytm znajdujący trasę z punktu A do punktu B o najmniejszym koszcie.
+
+\offline\
+# Proszę zaimplementować funkcję max_extending_path,
+# która dostaje na wejściu G, c, oraz wierzchołki s i t i znajduje ścieżkę
+# skierowaną z s do t o maksymalnej przepustowości (czyli minimalna przepustowość
+# krawędzi na ścieżce powinna być jak największa).

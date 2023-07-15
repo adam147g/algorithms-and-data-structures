@@ -1,0 +1,179 @@
+		ćw 4.
+zad1.
+# Sortowanie tablicy n liczb ze zbioru {0, 1, ..., n^2 - 1}
+# zamieniamy liczby 0 - n^2-1 na  takie w systemie n-kowym
+# wtedy długość ich będzie wynosiła 2 w tym systemie
+
+zad2.
+# Sortowanie tablicy rozmiaru n zawierającej logn róznych wartości.
+
+zad3.
+# Mamy dane dwa słowa a,b. Proszę podać algorytm sprawdzający czy są anagramami.
+# kot, tok - anagramy
+# kot, kat - nie anagramy
+
+zad4.
+# A - tablica zawierająca na parami różnych liczb (nieposortowana)
+# Proszę znaleźć liczby A[i], A[j] takie, że:
+#   a) A[i] - A[j] jest największe
+#   b) nie ma liczby A[t]: A[i] > A[t] > A[j]
+
+zad5.
+# A - n elementowa tablica, gdzie A[i] to numer koloru i A[i] {0, 1, ..., k-1}
+# Znaleźć indeksy i < j takie, że:
+#   a) j - i jest jak najmniejsze
+#   b) w przedziale A[i], A[i+1], ..., A[j] pojawiają się wszystkie k kolory.
+
+/offline/
+# Zaimplementować funkcję printAllLIS( A ), która otrzymuje na wejściu
+# tablicę liczb naturalnych A i wypisuje na ekranie wszystkie najdłuższe
+# rosnące ciągi oraz zwraca ich liczbę
+
+
+		ćw 5.
+---- DYNAMICZNE ----
+zad1.
+# W problemie sumy podzbioru mamy dany ciąg liczb naturalnych A[0], ..., A[n-1]
+# oraz liczbę T. Należy stwierdzić czy istnieje podciąg sumujący się dokładnie do T.
+
+
+# f(i,j) - czy istnieje suma w podzbiorze {a_0, a_1, ..., a_i-1} o wartości j
+# f(0,0) = True
+# f(0,j) = False , j>0
+# f(i,0) = True
+# f(i,j) = f(i-1,j) or f(i-1,j-A[i-1])
+#                           j>=A[i-1]
+
+zad2.
+# Proszę przedstawić algorytm problemu knapsack działający w czasie O(n*sum(i=0, n-1)P[i])
+
+zad3.
+# Znajdź długość najdłuższego wspólnego podciągu A[n], B[n].
+#
+# f(i,j) - długość najdłuższego wspólnego podciągu do znków A[i], B[j]
+# f(i,0) = f(0,j) = 0
+
+#          max(T[i-1][j], T[i][j-1]),
+# f(i,j) =             lub
+#          T[i-1][j-1]+1, gdy A[i-1] == B[j-1]
+
+zad4.
+# Problem wydania danej kwoty w jak najmniejszej liczbie nominałów
+
+# f(i) - min liczba monet do wydania i
+# f(0) = 0
+# f(i) = min    f(i-m_j)+1
+#       dla j - należącego {1, ..., n}
+
+zad5.
+# Dana jest szachownica A o wymiarach n x n. Należy przejść z pola (0,0) na pole (n,n)
+# korzystając jedynie z ruchów "w dół" oraz "w prawo". Wejście na dane pole kosztuje
+# tyle, co znajdująca się tam liczba.
+
+zad6.
+# Znajdź długość najdłuższego podciągu rosnącego A[n]:
+#    1) wykorzystuje LCS - najdłuższy wspólny podciąg
+#    2) ma złożoność O(n*log(n)) 
+
+zad7.
+# Dany jest ciąg macierzy A1, A2, ..., An. Znajdź koszt mnożenia macierzy przy
+# optymalnym doborze kolejności mnożenia (nawiasowania macierzy). Macierze nie są
+# koniecznie kwadratowe (ale znamy ich rozmiary).
+
+zad8.
+# Mając ciąg A, znaleźć taki podział ciądu na k podciągów,
+# aby najmniejsza wartość spośród kawałków była jak największa
+
+/offline/
+# W problemie komiwojżera mamy daną listę miast:
+# C = [["Wrocław", 0, 2], ["Warszawa", 4, 3],
+#      ["Gdańsk", 2, 4], ["Kraków", 3, 1]]
+# gdzie każde miasto jest opisane przez listę składających się z jego nazwy
+# i współrzędnych x, y jego pozycji na mapie (dla uproszczenia pomijamy
+# krzywiznę Ziemii). Miasta mają parami różne współrzędne x, ale mogą być podane
+# w dowolnej kolejności. Bitoniczny komiwojażer startuje w mieście o najmniejszej
+# współrzędnej x i jego celem jest odwiedzić wszystkie miasta przy założeniu,
+# że tylko raz może zmienić kierunek "w prawo" na "w lewo" (dokładny opis problemu
+# przedstawiony jest nawykładzie).
+# Proszę zaimplementować funkcję verb - bitcoinsTSP( C ) -, która wypisuje
+# na ekran długość trasy oraz po kolei miasta, które powinien odwiedzić komiwojażer.
+# W przypadku miast z przykładu powyżej wynikiem może być:
+#     Wrocław, Kraków, Warszawa, Gdańsk, Wrocław
+# (proszę zwrócić uwagę, że wynik nie jest jednoznaczny)
+
+
+		ćw 6.
+zad1.
+# Black Forest to las rosnący na osi liczbowej gdzieś w południowej Anglii. Las składa
+# się z n drzew rosnących na pozycjach 0, ..., n-1. Dla każdego i {0, ..., n-1} znany
+# jest zysk c[i], jaki można osiągnąć ścinając drzewo z pozycji i. John Lovenoses chce
+# uzyskać maksymalny zysk ze ścinanych drzew, ale prawo zabrania ścinania dwóch drzew
+# pod rząd. Proszę zaproponować algorytm, dzięki któremu John znajdzie optymalny plan
+# wycinki.
+
+zad2.
+# Każdy klocek to przedział postaci [a, b]. Dany jest ciąg klocków [a1, b1],
+# [a2, b2], ..., [an, bn]. Klocki spadają na oś liczbową w kolejności podanej
+# z ciągu. Proszę zaproponować algorytm, który oblicza ile klocków należy usunąć
+# z listy tak, żeby każdy kolejny spadający klocek mieścił się w całości w tamtym
+# który spadł tuż przed nim.
+
+zad3.
+# Dana jest tablica A[n] z długościami samochodów, które stoją w kolejce, żeby wjechać
+# na prom. Prom ma dwa pasy (lewy i prawy) oba długości L. Proszę napisać program,
+# który wyznacza, które samochody powinny pojechać na który pas, żeby na promie
+# zmieściło się jak najwięcej aut. Auta muszą wjeżdżać w takiej kolejności, w jakiej
+# są podane w tablicy A.
+
+zad4.
+# Pewna żaba skacze po osi liczbowej. Ma się dostać z 0 do n-1., skacząc wyłącznie
+# w kierunku większych liczb. Skok z liczby i do j (j>i) kosztuje ją j-i jednostek
+# energii, a jej energia nigdy nie może spaść poniżej 0. Na początku żaba ma 0
+# jednostek energi, ale na szczęście na niektórych liczbach - także na 0 - leżą
+# przekąski o określonej wartości energetycznej (wartości przekąski dodaje się do
+# aktualnej energii żaby). Proszę zaproponować algorytm, który oblicza minimalną
+# liczbę skoków potrzebną na dotarcie z 0 do n-1 mając daną tablicę A z wartościami
+# energetycznymi przekąsek na każdej z liczb.
+
+zad5.
+# Algorytm dla dwuwymiarowej wersji dyskretnego problemu plecakowego. Mamy dany
+# zbiór P = {p1, ..., pn} przedmiotów i dla każdego przedmiotu pi dane są
+# następujące trzy liczby:
+#   1. v(pi) - wartość przedmiotu
+#   2. w(pi) - waga przedmiotu
+#   3. h(pi) - wysokość przedmiotu
+# Złodziej chce wybrać przedmioty o maksymalnej wartości, których łączna waga nie
+# przekracza danej liczby W oraz których łączna wysokość nie przekracza danej
+# liczby H (przedmioty zapakowane są w kartony, które złodziej układa jeden na drugim).
+
+zad6.
+# Znajdź największą wartość ścieżki w drzewie binarnym
+#
+#        v
+#      /   \
+#    u      w
+#           /
+#          z
+
+zad7.
+# Mamy zbiór przedziałów, chcemy sprawdzić, czy da się je skleić
+# aby utworzyć zadany przedział
+
+/offline/
+# Dana jest tablica symboli S oraz tablica ich częstości F. Przykładowe dane to:
+#   S = ["a", "b", "c", "d", "e", "f" ]
+#   F = [10 , 11 ,  7 , 13 ,  1 , 20  ]
+#   symbol "a" ma częstość 10, symbol "b" ma częstość 11 itd.
+#
+# Proszę napisać funkcję huffman( S, F), która oblicza kod Huffmana dla
+# takich danych, wypisuje symbol (w kolejności z tablicy S) wraz z jego
+# kodem, oraz łączną liczbę bitów potrzebną do wypisania napisu, w którym
+# każdy symbool występuje podaną częstość razy. Przykładowy wynik dla
+# podanego powyżej wejścia to:
+# a : 011
+# b : 10
+# c : 0101
+# d : 11
+# e : 0100
+# f : 00
+# długość napisu: 150

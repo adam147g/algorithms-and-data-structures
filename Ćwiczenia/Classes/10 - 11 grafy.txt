@@ -1,0 +1,173 @@
+		ćw 10.
+zad1.
+# Proszę zaproponować algorytm, który dla danych wierzchołków x i y oblicza ścieżkę o
+# najmniejszej sumie wag, która prowadzi z x do y po krawędziach o malejących wagach (jeśli ścieżki
+# nie ma to zwracamy inf).
+
+zad2.
+# Proszę zaproponować algorytm obliczający domknięcie przechodnie grafu reprezentowanego w postaci
+# macierzowej (domknięcie przechodnie grafu G to taki graf H, że w H mamy krawędź z u do v wtedy
+# i tylko wtedy gdy w G jest ścieżka skierowana z u do v).
+
+zad3.
+# Dana jest formuła logiczna w postaci 2CNF. To znaczy, że formuła jest koniunkcją klauzuli, gdzie
+# każda klauzula to alternatywa dwóch literałów, a każdy literał to zmienna lub jej negacja. Przykładem
+# formuły w postaci 2CNF nad zmiennymi x,y,z jest:
+# (x v y) ∧ (~x v z) ∧ (~z v ~y).
+# Proszę podać algorytm, który w czasie wielomianowym stwierdza, czy istnieje wartościowanie
+# spełniające formułę.
+
+zad4.
+# Król Bitocji postanowił zorganizować serię wyścigów samochodowych. Wyścigi mają się odbywać po trasach
+# zamkniętych, składających się z odcinków autostrady łączących miasta Bitocji. Król chce, żeby każde
+# miasto było zaangażowane w dokładnie jeden wyścig. W tym celu należy sprawdzić, czy da się wynająć
+# odpowiednie odcinki autostrad. Należy jednak pamiętać o następujących ograniczeniach:
+#   1) w Bitocji wszystkie autostrady są jednokierunkowe,
+#   2) z każdego miasta wychodzą co najwyżej dwa odcinki autostrady, którymi można dojechać do innych
+# miast,
+#   3) do każdego miasta dochodzą co najwyżej dwa odcinki autostrady, którymi można przyjechać z innych
+# miast.
+# Proszę zaproponować algorytm, który mając na wejściu opis sieci autostrad Bitocji sprawdza czy da się
+# zorganizować serię wyścigów tak, żeby przez każde miasto przebiegała trasa dokładnie jednego.
+
+zad5.
+# Dana jest tabela kursów walut. Dla każdych dwóch walut 'x' oraz 'y' wpis K[x][y] oznacza ile trzeba
+# zapłacić waluty 'x' żeby otrzymać jednostkę waluty 'y'. Proszę zaproponować algorytm, który sprawdza
+# czy istnieje taka waluta 'z', że za jednostkę 'z' można uzyskać więcej niż jednostkę 'z' przez serię
+# wymian walut.
+
+zad6.
+# Algocja leży na wielkiej pustyni i składa się z miast oraz oaz połączonych drogami. Każde miasto
+# jest otoczone murem i ma tylko dwie bramy - północną i południową. Z każdej bramy prowadzi dokładnie
+# jedna droga do jednej oazy (ale do danej oazy może dochodzić dowolnie wiele dróg; oazy mogą też być
+# połączone drogami między sobą). Prawo Algocji wymaga, że jeśli ktoś wjechał do miasta jedną bramą,
+# to musi go opuścić drugą. Szach Algocji postanowił wysłać gońca, który w każdym mieście kraju odczyta
+# zakaz formułowania zadań “o szachownicy” (obraza majestatu). Szach chce, żeby goniec odwiedził każde
+# miasto dokładnie raz (ale nie ma ograniczeń na to ile razy odwiedzi każdą z oaz). Goniec wyjeżdża ze
+# stolicy Algocji, miasta x, i po odwiedzeniu wszystkich miast ma do niej wrócić. Proszę przedstawić
+# algorytm, który stwierdza czy odpowiednia trasa gońca istnieje.
+
+zad7.
+# W pewnym państwie, w którym znajduje się N miast, postanowiono połączyć miasta siecią autostrad, tak
+# aby możliwe było dotarcie autostradą do każdego miasta. Ponieważ kontynent, na którym leży państwo
+# jest płaski położenie każdego z miast opisują dwie liczby x, y, a odległość w linii prostej pomiędzy
+# miastami liczona w kilometrach wyraża się wzorem len = sqrt((x1-x2)**2 + (y1-y2)**2). Z uwagi na
+# oszczędność materiałów autostrada łączy dwa miasta w linii prostej. Ponieważ zbliżają się wybory
+# prezydenckie, wszystkie autostrady zaczęto budować równocześnie i jako cel postanowiono zminimalizować
+# czas pomiędzy otwarciem pierwszej i ostatniej autostrady. Czas budowy autostrady wyrażony w dniach
+# wynosi ceil(len) (sufit z długości autostrady wyrażonej w km). Proszę zaimplementować algorytm
+# wyznaczający minimalną liczbę dni dzielącą otwarcie pierwszej i ostatniej autostrady.
+
+zad8.
+# Dany jest acykliczny, spójny, nieskierowany, ważony graf T (czyli T jest tak naprawdę ważonym
+# drzewem). Proszę wskazać algorytm, który znajduje taki wierzchołek t, z którego odległość do
+# najdalszego wierzchołka jest minimalna.
+
+\offline\
+# Proszę zaimplementować funkcje insert( root, key) oraz remove( root, key) ,
+# które przyjmują na wejściu korzeń drzewa oraz pewien klucz, odpowiednio,
+# wstawiają do drzewa lub usuwają z niego:
+#   1. Funkcja insert zwraca True jeśli klucze nie było w drzewie i udało się
+#   go wstawić. W przeciwnym razie jeśli już jest w drzewie - nie wstawia
+#   go ponownie i zwraca False.
+#   2. Funkcja remove zwraca True jeśli udało się usunąć klucz z drzewa
+#   lub False jeśli danego klucza w drzewie nie było.
+#
+# W przypadku funkcji remove dopuszczalne jest kopiowanie wartości klucza
+# zamiast przepinania wskaźników gdy usuwany klucz jest w węźle zawierającym
+# dwójkę dzieci.
+
+
+		ćw 11.
+zad1.
+# Mamy dany graf skierowany G = (V, E) oraz funkcję c: E → N opisującą przepustowość każdej krawędzi
+# (liczbę jednostek towaru na godzinę, które mogą się przemieszczać krawędzią). Poza tym mamy dany zbiór
+# wierzchołków-fabryk S = {s1, ..., sn} oraz zbiór wierzchołków-sklepów T = {t1, ..., tm}. Dla każdej
+# fabryki s[i] znamy liczbę p[i] określającą ile jednostek towaru na godzinę fabryka może maksymalnie
+# produkować. Jednocześnie dla każdego sklepu t[j] mamy liczbę q[j], która mówi ile jednostek towaru
+# na godzinę musi do tego sklepu docierać. Proszę podać algorytm, który sprawdza, czy da się zapewnić,
+# żeby do każdego sklepu docierało z fabryk dokładnie tyle jednostek towaru ile sklep wymaga
+# jednocześnie nie zmuszając żadnej fabryki do przekroczenia swoich możliwości produkcyjnych i nie
+# przekraczając przepustowości żadnej z krawędzi.
+
+zad2.
+# Proszę zaimplementować funkcję znajdującą element o następnej wartości klucza niż podany
+# w drzewie BST.
+
+zad3.
+# Proszę wskazać algorytm, który znajduje maksymalny przepływ między źródłem i ujściem w grafie
+# nieskierowanym. Proszę użyć algorytmu z wykładu — dla grafów skierowanych, gdzie między każdą parą
+# wierzchołków jest najwyżej jedna krawędź — jako czarnej skrzynki. Alternatywnie można opisać
+# implementację bezpośrednio pracując na grafie nieskierowanym.
+
+zad4.
+# Dany jest graf nieskierowany G = (V, E). Mówimy, że spójność krawędziowa G wynosi k jeśli usunięcie
+# pewnych k krawędzi powoduje, że G jest niespójny, ale usunięcie dowolnych k−1 krawędzi nie rozspójnia
+# go. Proszę podać algorytm, który oblicza spójność krawędziową danego grafu.
+
+zad5.
+# Dana jest formuła logiczna postaci: C1 ∧ C2 ∧ ... ∧ Cm, gdzie każda C[i] to klauzula będąca
+# alternatywą zmiennych i/lub ich zaprzeczeń. Wiadomo, że każda zmienna występuje w formule dokładnie
+# dwa razy, raz zanegowana i raz niezanegowana. Na przykład podana formuła stanowi dopuszczalne
+# wejście: (x ∨ y ∨ z) ∧ (~y ∨ w) ∧ (~z ∨ v) ∧ (~x ∨ ~w) ∧ (~v). Proszę podać algorytm, który oblicza
+# takie wartości zmiennych, że formuła jest prawdziwa.
+
+zad6.
+# Proszę podać algorytm, który mając na wejściu drzewo oblicza skojarzenie o maksymalnej liczności.
+# Czy algorytm dalej będzie działać jeśli każda krawędź będzie mieć dodatnią wagę i szukamy
+# skojarzenia o maksymalnej sumie wag?
+
+zad7.
+# Dany jest graf skierowany G = (V, E) oraz wierzchołki s i t. Proszę zaproponować algorytm znajdujący
+# maksymalną liczbę rozłącznych (wierzchołkowo) ścieżek między s i t.
+
+zad8.
+# Rozważmy drzewa BST, które dodatkowo w każdym węźle zawierają pole z liczbą węzłów w danym
+# poddrzewie. Proszę opisać jak w takim drzewie wykonywać następujące operacje:
+#   1) znalezienie i-go co do wielkości elementu,
+#   2) wyznaczenie, którym co do wielkości w drzewie jest zadany węzeł.
+# Proszę zaimplementować obie operacje.
+
+zad9.
+# Proszę zapropnować algorytm, który oblicza sumę wszystkich wartości w drzewie binarnym zdefiniowanym
+# na węzłach typu:
+# class BNode:
+#     def __init__(self, value):
+#         self.left = None
+#         self.right = None
+#         self.parent = None
+#         self.value = value
+# Program może korzystać wyłącznie ze stałej liczby zmiennych (ale wolno mu zmieniać strukturę drzewa,
+# pod warunkiem, że po zakończonych obliczeniach drzewo zostanie przywrócone do stanu początkowego.)
+
+zad10.
+# W pewnym laboratorium genetycznym powstał ciąg sekwencji DNA. Każda sekwencja to pewien napis
+# składający się z symboli G, A, T i C. Przed dalszymi badaniami konieczne jest upewnić się, że wszystkie
+# sekwencje DNA są parami rózne. Proszę opisać algorytm, który sprawdza czy tak faktycznie jest.
+
+zad11.
+# Dany jest ciąg klocków (K1, ..., Kn). Klocek K[i] zaczyna sie na pozycji a[i] i ciągnie się do pozycji
+# b[i] (wszystkie pozycje to nieujemne liczby naturalne) oraz ma wysokość 1. Klocki układane są po
+# kolei–jeśli klocek nachodzi na któryś z poprzednich, to jest przymocowywany na szczycie poprzedzajacego
+# klocka). Na przykład dla klocków o pozycjach (1, 3), (2, 5), (0, 3), (8, 9), (4, 6) powstaje
+# konstrukcja o wysokosci trzech klocków. Proszę podac możliwie jak najszybszy algorytm, który oblicza
+# wysokość powstałej konstrukcji.
+
+\offline\
+# Dana jest ablica klocków K[0], K[1], ..., K[n-1]. Każdy klocek to krotka (a,b,c),
+# która mówi, że klocek zaczyna się na pozycji a, ciągnie się do b
+# (wszystkie pozycje to nieujemne liczby naturalne) oraz ma wysokość c.
+# Można założyć że a < b oraz c >= 1, oraz że a, b, c to liczby naturalne.
+# Klocki układane są po kolei. Jeśli klocek nachodzi na któryś z poprzednich,
+# to jest przymocowany na szczycie poprzedzającego klocka. Na przykład dla klocków
+# opisanych przez (1,3,1), (2,5,2), (0,3,2), (8,9,3), (4,6,1) powstje konstrukcja
+# o wysokości 5:
+#     --- obrazek działa dla odczytu w pycharmie ---
+#    ___________
+# 5||   K[2]    |    _______
+# 4||___________|___|__K[4]_|        ____
+# 3|        |    K[1]   |           |    |
+# 2|     ___|___________|           |K[3]|
+# 1|____|_K[0]__|___________________|____|_____
+#   0   1   2   3   4   5   6   7   8    9   10
+# Napisz funkcję, która zwraca wysokość konstrukcji.
