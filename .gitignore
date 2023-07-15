@@ -3,8 +3,8 @@
 *.mkv
 *.mov
 *.docx
-Wykłady 2021/**/*.pdf
-Wykłady 2021/Wykład 4/*.bmp
-Wykłady 2021/Wykład 5/*.mp3
-Wykłady 2021/Wykład 15/
-Wykłady 2022/
+Theory 2021/**/*.pdf
+Theory 2021/Wykład 4/*.bmp
+Theory 2021/Wykład 5/*.mp3
+Theory 2021/Wykład 15/
+Theory 2022/
