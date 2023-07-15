@@ -15,9 +15,7 @@
 # Jeśli tak, proszę to uzasadnić. Jeśli nie, to proszę podać kontrprzykład.
 
 
-'''
-nie działa imo
-'''
+
 def place_bricks(bricks, visited, full_range, height, result):
     check = False
     for i in range(len(bricks)):

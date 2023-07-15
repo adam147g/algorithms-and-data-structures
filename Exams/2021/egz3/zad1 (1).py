@@ -1,15 +1,5 @@
 from zad1testy import runtests
 
-'''
-Martyna Olszewska
-Tworzymy dwie pomocnicze tablice (inc i dec), w jednej przechowujemy pod indeksem i najdłuższy podciąg malejący kończący się w X[i],
-a w drugiej przechowujemy najdłuższy podciąg rosnący zaczynający się w X[i].
-Następnie wybieramy max z tablcy inc, dec,  lub inc[i] + dec[i] - 1 i jest to długość najdłuższego ciągu typu MR.
-złożoność czasowa n^2.
-Algorytm może działać szybciej jeśli użyjemy wyszukiwania binarnego, wtedy O(nlogn).
-'''
-
-
 def printsolution(A, P, i, res):
     if P[i] != -1:
         printsolution(A, P, P[i], res)
