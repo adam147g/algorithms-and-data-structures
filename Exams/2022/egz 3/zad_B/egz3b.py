@@ -38,24 +38,63 @@ from collections import deque
 #     return f(n - 1, n - 1, None, None, moves, L, DP, n)
 
 
+# def maze(L):
+#     n = len(L)
+#     DP = [[-1 for _ in range(n)] for _ in range(n)]
+#     moves = [(1, 0), (-1, 0), (0, 1)]
+#     q = deque()
+#     q.append((0, 0, 0, None, None))
+#     while q:
+#         dist, x, y, last_x, last_y = q.popleft()
+#         if DP[x][y] < dist:
+#             DP[x][y] = dist
+#         for next_move in moves:
+#             next_x = x + next_move[0]
+#             next_y = y + next_move[1]
+#             if next_x != last_x or next_y != last_y:
+#                 if -1 < next_x < n and -1 < next_y < n:
+#                     if L[next_x][next_y] != '#':
+#                         q.append((dist + 1, next_x, next_y, x, y))
+#     return DP[n - 1][n - 1]
+
+
+# 0 - z dołu
+# 1 - z góry
+# 2 - z prawej
+
+def f(row, col, value, direction, DP, I, n):
+    if DP[row][col][direction] < value:
+        DP[row][col][direction] = value
+    if row == col == 0:
+        return
+    if direction == 0:
+        if row - 1 > -1 and I[row - 1][col] != '#':
+            f(row - 1, col, value + 1, 0, DP, I, n)
+        if col - 1 > -1 and I[row][col - 1] != '#':
+            f(row, col - 1, value + 1, 2, DP, I, n)
+    if direction == 1:
+        if row + 1 < n and I[row + 1][col] != '#':
+            f(row + 1, col, value + 1, 1, DP, I, n)
+        if col - 1 > -1 and I[row][col - 1] != '#':
+            f(row, col - 1, value + 1, 2, DP, I, n)
+    if direction == 2:
+        if row - 1 > -1 and I[row - 1][col] != '#':
+            f(row - 1, col, value + 1, 0, DP, I, n)
+        if row + 1 < n and I[row + 1][col] != '#':
+            f(row + 1, col, value + 1, 1, DP, I, n)
+        if col - 1 > -1 and I[row][col - 1] != '#':
+            f(row, col - 1, value + 1, 2, DP, I, n)
+
+
 def maze(L):
     n = len(L)
-    DP = [[-1 for _ in range(n)] for _ in range(n)]
-    moves = [(1, 0), (-1, 0), (0, 1)]
-    q = deque()
-    q.append((0, 0, 0, None, None))
-    while q:
-        dist, x, y, last_x, last_y = q.popleft()
-        if DP[x][y] < dist:
-            DP[x][y] = dist
-        for next_move in moves:
-            next_x = x + next_move[0]
-            next_y = y + next_move[1]
-            if next_x != last_x or next_y != last_y:
-                if -1 < next_x < n and -1 < next_y < n:
-                    if L[next_x][next_y] != '#':
-                        q.append((dist + 1, next_x, next_y, x, y))
-    return DP[n - 1][n - 1]
+    DP = [[[-1 for _ in range(3)] for _ in range(n)] for _ in range(n)]
+    DP[n - 1][n - 1][0] = DP[n - 1][n - 1][1] = DP[n - 1][n - 1][2] = 0
+    if L[n - 2][n - 1] != '#':
+        f(n - 2, n - 1, 1, 0, DP, L, n)
+    if L[n - 1][n - 2] != '#':
+        f(n - 1, n - 2, 1, 2, DP, L, n)
+    return max(DP[0][0][0], DP[0][0][1], DP[0][0][2])
 
 
 # zmien all_tests na True zeby uruchomic wszystkie testy
