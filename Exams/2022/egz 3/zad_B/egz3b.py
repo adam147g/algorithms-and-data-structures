@@ -48,6 +48,7 @@ from collections import deque
 #         dist, x, y, last_x, last_y = q.popleft()
 #         if DP[x][y] < dist:
 #             DP[x][y] = dist
+#
 #         for next_move in moves:
 #             next_x = x + next_move[0]
 #             next_y = y + next_move[1]
@@ -65,6 +66,8 @@ from collections import deque
 def f(row, col, value, direction, DP, I, n):
     if DP[row][col][direction] < value:
         DP[row][col][direction] = value
+    else:
+        return
     if row == col == 0:
         return
     if direction == 0:
