@@ -1,20 +1,18 @@
-"""
-Zuzanna Olszówka
-Algorytm zachłanny:
-Istnieje taki dzień, w którym śnieg na wszystkich obszarach do tego dnia albo się stopi albo zostanie zebrany.
-W związu z tym chcemy zebrać śnieg z obszarów z największą ilością śniegu, ponieważ na każdym obszarze śnieg topi się równomiernie.
-Dzięki temu nie ma też różnicy w tym, czy będziemy zbierać śnieg z zachodniej czy ze wschodniej strony, bo do żeby wymaksować
-ilość śniegu wystarczy zebrać te największe obszary do momentu aż wszystko pozostałe się stopi.
 
-
-Do kolejki priorytetowej wkładam wszystkie elementy z tablicy S, ale z ujemnym znakiem, żeby wyciągać z niej najpierw te największe wartości z S.
-Mam licznik dni, który będę zwiększała co iterację.
-Do momentu gdy kolejka będzie pusta albo gdy różnica x-d - (już dodatniej) wartości wyciągniętej z kolejki i liczby dni, które minęły będzie większa od 0
-zwiększam wartość res o x-d.
-Zwracam res.
-
-Złożoność algorytmu: O(nlogn)
-"""
+# Algorytm zachłanny:
+# Istnieje taki dzień, w którym śnieg na wszystkich obszarach do tego dnia albo się stopi albo zostanie zebrany.
+# W związu z tym chcemy zebrać śnieg z obszarów z największą ilością śniegu, ponieważ na każdym obszarze śnieg topi się równomiernie.
+# Dzięki temu nie ma też różnicy w tym, czy będziemy zbierać śnieg z zachodniej czy ze wschodniej strony, bo do żeby wymaksować
+# ilość śniegu wystarczy zebrać te największe obszary do momentu aż wszystko pozostałe się stopi.
+#
+#
+# Do kolejki priorytetowej wkładam wszystkie elementy z tablicy S, ale z ujemnym znakiem, żeby wyciągać z niej najpierw te największe wartości z S.
+# Mam licznik dni, który będę zwiększała co iterację.
+# Do momentu gdy kolejka będzie pusta albo gdy różnica x-d - (już dodatniej) wartości wyciągniętej z kolejki i liczby dni, które minęły będzie większa od 0
+# zwiększam wartość res o x-d.
+# Zwracam res.
+#
+# Złożoność algorytmu: O(nlogn)
 
 from egz1atesty import runtests
 from queue import PriorityQueue

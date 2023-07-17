@@ -1,15 +1,12 @@
-"""
-Zuzanna Olszówka
-W moim algorytmie na początku wyliczam jego wysokość (maxh).
-Następnie znajduję poziom drzewa (H), na którym znajduje się najwięcej węzłów -przejście liniowe po tablicy i znalezienie maxa pod największym indeksem jeśli jest kilka maxów,
-zliczając w tablicy o wysokości drzewa liczbę węzłów.
-W kolejnym kroku dla każdego węzła zaznaczam w T.x True jeśli znajduje się na poziomie H albo False jeśli się nie znajduje.
-Przechodze jeszcze raz rekurencyjnie po drzewie i zaznaczam dla każdego węzła True jeśli chociaż jeden z jego synów miał jakiegoś potomka na poziomie H i False jeśli żaden z potomków nie był na tym poziomie.
-Na koniec zliczam liczbę węzłów, które nie mają żadnego potomka na poziomie H. Jeśli pole x węzła ma wartość False to już nie szukam głębiej, po muszę odciąć tylko jedną krawędź by usunąć całe poddrzewo.
-
-Złożoność algorytmu: O(n)
-
-"""
+#
+# W moim algorytmie na początku wyliczam jego wysokość (maxh).
+# Następnie znajduję poziom drzewa (H), na którym znajduje się najwięcej węzłów -przejście liniowe po tablicy i znalezienie maxa pod największym indeksem jeśli jest kilka maxów,
+# zliczając w tablicy o wysokości drzewa liczbę węzłów.
+# W kolejnym kroku dla każdego węzła zaznaczam w T.x True jeśli znajduje się na poziomie H albo False jeśli się nie znajduje.
+# Przechodze jeszcze raz rekurencyjnie po drzewie i zaznaczam dla każdego węzła True jeśli chociaż jeden z jego synów miał jakiegoś potomka na poziomie H i False jeśli żaden z potomków nie był na tym poziomie.
+# Na koniec zliczam liczbę węzłów, które nie mają żadnego potomka na poziomie H. Jeśli pole x węzła ma wartość False to już nie szukam głębiej, po muszę odciąć tylko jedną krawędź by usunąć całe poddrzewo.
+#
+# Złożoność algorytmu: O(n)
 
 from egz1btesty import runtests
 
